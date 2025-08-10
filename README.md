@@ -2,6 +2,8 @@
 
 A WordPress inline formatting tool for creating pull quotes using a custom web component. Works like **bold** or _italic_ formatting - just highlight text and click the pull quote button.
 
+Note, this version of the plugin was develped for use on https://tampamonitor.com, thus the `theme-integration.css` for that site's colors. It may evolve into more as time permits. YMMV
+
 ## Features
 
 - 🖱️ **Inline Formatting**: Highlight text and click the pull quote button in the rich text toolbar
