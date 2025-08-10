@@ -1,0 +1,106 @@
+/* Monitor Twenty-Five theme integration for Pull Quote web component */
+/* This file sets the web component custom properties to match the theme colors */
+/* Updated for the new logical properties and consistent naming */
+
+/* Default (left) pull quote styles using theme colors */
+pull-quote {
+  --pullquote-inline-size: 25%;
+  --pullquote-font-size: 1.1em;
+  --pullquote-margin-block-start: 0.5em;
+  --pullquote-margin-block-end: 0.5em;
+  --pullquote-margin-inline-start: 0;
+  --pullquote-margin-inline-end: 1.5em;
+  --pullquote-padding-block: 1em;
+  --pullquote-padding-inline: 1.25em;
+  --pullquote-float: left;
+  --pullquote-border-inline-end: 4px solid
+    var(--wp--preset--color--accent-1, #e6b45e);
+  --pullquote-color: var(--wp--preset--color--contrast, #314a59);
+  --pullquote-background: color-mix(
+    in srgb,
+    var(--wp--preset--color--base) 95%,
+    var(--wp--preset--color--contrast) 5%
+  );
+}
+
+/* Right-aligned pull quote styles using theme colors - more subtle styling */
+pull-quote[right] {
+  --pullquote-right-margin-inline-start: 1.5em;
+  --pullquote-right-margin-inline-end: 0;
+  --pullquote-right-border-inline-start: 4px solid
+    var(--wp--preset--color--accent-1, #e6b45e);
+  --pullquote-right-color: var(--wp--preset--color--contrast, #314a59);
+  --pullquote-right-background: color-mix(
+    in srgb,
+    var(--wp--preset--color--base) 95%,
+    var(--wp--preset--color--accent-1) 5%
+  );
+}
+
+/* Center-aligned pull quote styles using theme colors */
+pull-quote[center] {
+  --pullquote-center-margin-inline: auto;
+  --pullquote-center-margin-block-start: 2em;
+  --pullquote-center-margin-block-end: 2em;
+  --pullquote-center-inline-size: min(90%, 40em);
+  --pullquote-center-text-align: center;
+  --pullquote-center-border-block-start: 3px solid
+    var(--wp--preset--color--accent-1, #e6b45e);
+  --pullquote-center-border-block-end: 3px solid
+    var(--wp--preset--color--accent-1, #e6b45e);
+  --pullquote-center-color: var(--wp--preset--color--contrast, #314a59);
+  --pullquote-center-background: color-mix(
+    in srgb,
+    var(--wp--preset--color--base) 97%,
+    var(--wp--preset--color--contrast) 3%
+  );
+  --pullquote-center-font-style: italic;
+}
+
+/* Additional styling for better theme integration */
+pull-quote {
+  /* Use theme typography */
+  font-family: var(
+    --wp--preset--font-family--libre-franklin,
+    "Libre Franklin",
+    sans-serif
+  );
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+/* Responsive adjustments that work with theme layout */
+@media (max-width: 768px) {
+  pull-quote,
+  pull-quote[right] {
+    --pullquote-inline-size: 100% !important;
+    --pullquote-font-size: 1em !important;
+    --pullquote-margin-block-end: 1em !important;
+    --pullquote-margin-inline-start: 0 !important;
+    --pullquote-margin-inline-end: 0 !important;
+  }
+}
+
+/* Integration with theme's content width */
+@media (min-width: 960px) {
+  pull-quote,
+  pull-quote[right] {
+    --pullquote-inline-size: 28%;
+    --pullquote-font-size: 1.2em;
+  }
+}
+
+/* Ensure pull quotes work well with theme's quote block styling */
+.wp-block-quote pull-quote {
+  font-style: normal;
+  color: inherit;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0 0.5em;
+  display: inline;
+  float: none;
+  inline-size: auto;
+  font-size: 1em;
+}

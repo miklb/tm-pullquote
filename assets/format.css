@@ -1,0 +1,59 @@
+/* Monitor Twenty-Five theme-specific styles for pull quote format */
+
+/* Toolbar button styling using theme colors */
+.components-toolbar .components-button[title*="Pull Quote"] {
+  color: var(--wp--preset--color--contrast, #314a59);
+}
+
+.components-toolbar .components-button[title*="Pull Quote"]:hover {
+  color: var(--wp--preset--color--accent-1, #e6b45e);
+}
+
+.components-toolbar .components-button[title*="Pull Quote"].is-pressed {
+  background-color: var(--wp--preset--color--accent-1, #e6b45e);
+  color: var(--wp--preset--color--base, #f1f1e6);
+}
+
+/* In-editor pull quote preview using theme colors */
+.block-editor-rich-text__editable pull-quote {
+  display: inline !important;
+  font-weight: 600;
+  font-style: italic;
+  font-family: var(
+    --wp--preset--font-family--libre-franklin,
+    "Libre Franklin",
+    sans-serif
+  );
+  color: var(--wp--preset--color--contrast, #314a59);
+  background-color: color-mix(
+    in srgb,
+    var(--wp--preset--color--base) 92%,
+    var(--wp--preset--color--contrast) 8%
+  );
+  padding: 2px 6px;
+  margin: 0 2px;
+  border-radius: 3px;
+  border-bottom: 2px solid var(--wp--preset--color--accent-1, #e6b45e);
+  text-decoration: none !important;
+}
+
+.block-editor-rich-text__editable pull-quote[right] {
+  border-bottom-color: var(--wp--preset--color--accent-2, #e6a4a1);
+}
+
+/* Add visual indicators using theme typography */
+.block-editor-rich-text__editable pull-quote::before {
+  content: ""
+    ";
+  opacity: 0.7;
+  font-size: 0.9em;
+  color: var(--wp--preset--color--accent-4, #8A8A82);
+}
+
+.block-editor-rich-text__editable pull-quote::after {
+  content: "
+    "";
+  opacity: 0.7;
+  font-size: 0.9em;
+  color: var(--wp--preset--color--accent-4, #8a8a82);
+}
