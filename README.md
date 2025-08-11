@@ -128,28 +128,44 @@ tm-pullquote/
 The web component responds to these CSS custom properties (applied directly to `pull-quote` elements):
 
 ```css
+/* Default (Left) Alignment */
 pull-quote {
-  --pullquote-width: 25%;
-  --pq-font-size: 1.1em;
-  --pullquote-border-right: 4px solid #color;
-  --pullquote-color: #text-color;
-  --pullquote-left-bg: #background-color;
+  --pullquote-inline-size: 25%;
+  --pullquote-font-size: 1.5em;
+  --pullquote-margin-block-start: 0;
+  --pullquote-margin-block-end: 1.5em;
+  --pullquote-margin-inline-start: 0;
+  --pullquote-margin-inline-end: 1.5em;
+  --pullquote-padding-block: 1em;
+  --pullquote-padding-inline: 1.25em;
+  --pullquote-float: left;
+  --pullquote-border-inline-end: 4px solid #666;
+  --pullquote-color: #666;
+  --pullquote-background: #f9f9f9;
+  --pullquote-clear: none;
 }
 
-/* Right alignment */
-pull-quote[right],
-pull-quote[align="right"] {
-  --pq-border-left: 4px solid #color;
-  --pq-right-color: #text-color;
-  --pq-right-bg: #background-color;
+/* Right Alignment */
+pull-quote[right] {
+  --pullquote-right-border-inline-start: 4px solid #e74c3c;
+  --pullquote-right-margin-inline-start: 1.5em;
+  --pullquote-right-margin-inline-end: 0;
+  --pullquote-right-color: #fff;
+  --pullquote-right-background: #e74c3c;
 }
 
-/* Center alignment */
-pull-quote[align="center"] {
-  --pq-center-border-top: 3px solid #color;
-  --pq-center-border-bottom: 3px solid #color;
-  --pq-center-color: #text-color;
-  --pullquote-center-bg: #background-color;
+/* Center Alignment */
+pull-quote[center] {
+  --pullquote-center-margin-inline: auto;
+  --pullquote-center-margin-block-start: 2em;
+  --pullquote-center-margin-block-end: 2em;
+  --pullquote-center-text-align: center;
+  --pullquote-center-border-block-start: 3px solid #3498db;
+  --pullquote-center-border-block-end: 3px solid #3498db;
+  --pullquote-center-color: #2c3e50;
+  --pullquote-center-background: #ecf0f1;
+  --pullquote-center-font-style: italic;
+  --pullquote-center-inline-size: min(90%, 40em);
 }
 ```
 
